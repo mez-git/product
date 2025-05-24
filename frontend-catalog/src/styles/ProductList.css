@@ -1,0 +1,33 @@
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 4px;
+    margin: 4px;
+ padding-bottom: 14px;
+}
+
+.search-container{
+     display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.search input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ border: none;
+ outline: none;
+ flex: 1;
+ background-color: transparent;
+}
+.search-container .search-tool {
+    padding: 2px;
+    margin: 2px;
+}

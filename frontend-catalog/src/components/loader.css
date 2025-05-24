@@ -1,0 +1,42 @@
+.custom-loader-bg {
+  background-color: #1e1e1e;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar-loader {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.bar {
+  width: 8px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 4px;
+  animation: grow 1.2s infinite ease-in-out;
+}
+
+.bar1 {
+  animation-delay: 0s;
+}
+.bar2 {
+  animation-delay: 0.2s;
+}
+.bar3 {
+  animation-delay: 0.4s;
+}
+
+@keyframes grow {
+  0%, 80%, 100% {
+    transform: scaleY(0.4);
+    opacity: 0.6;
+  }
+  40% {
+    transform: scaleY(1.0);
+    opacity: 1;
+  }
+}
