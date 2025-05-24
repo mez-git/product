@@ -1,62 +1,67 @@
-.back-link{
+.detail-container {
+  min-height: 100vh;
+  background-color: rgb(56, 59, 67);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  flex-direction: column;
+  text-align: center;
+}
+
+.back-link {
+  align-self: flex-start;
+  margin-bottom: 1rem;
   color: azure;
 }
-body {
 
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-}
-
-a {
-  text-decoration: none;
-  color:whitesmoke;
-}
-
-.container {
-  padding: 1rem;
-  height: 100vh;
-  background-color:  rgb(56, 59, 67);;
-}
-
-.grid {
-  display: grid;
-  gap: 1rem;
-}
-
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 767px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.card {
-  background-color: rgb(26 28 33);
-  padding: 1rem;
-  border-radius: 8px;
-  transition: transform 0.2s;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-}
-
-.card:hover {
-  transform: scale(1.02);
-}
-
-img {
+.detail-container .card {
+  background-color: rgb(26, 28, 33);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  max-width: 600px;
   width: 100%;
-  max-height: 200px;
+  text-align: left;
+  color: white;
+}
+
+.detail-container .card img {
+  width: 100%;
+  max-height: 300px;
   object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.detail-container .card h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.detail-container .card p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.detail-container .card small {
+  display: block;
+  margin-top: 1rem;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+ .detail-container .card {
+    padding: 1rem;
+  }
+
+ .detail-container .card h2 {
+    font-size: 1.25rem;
+  }
+
+  .detail-container .card img {
+    max-height: 200px;
+  }
 }

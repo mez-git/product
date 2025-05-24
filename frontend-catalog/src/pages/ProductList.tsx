@@ -3,6 +3,7 @@ import ProductCard from "../components/ProductCard";
 import Loader from "../components/Loader";
 import { type Product } from "../types";
 import "../styles/ProductList.css";
+import NoProductFound from "../components/NoProductFound";
 export default function ProductList() {
   const [products, setProducts] = useState<Product[]>([]);
   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
@@ -66,13 +67,14 @@ export default function ProductList() {
             BROWSE
         </div>
     </div>
-      <div className="grid">
+<div className={`grid ${filteredProducts.length === 0 ? "empty" : ""}`}>
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))
         ) : (
-          <p>No products found.</p>
+            <div className="no-products"><NoProductFound/></div>
+       
         )}
       </div>
     </div>

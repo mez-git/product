@@ -26,7 +26,7 @@ export default function ProductDetail() {
   if (error) return <div className="container">{error}</div>;
 
   return (
-    <div className="container">
+    <div className="detail-container">
       <div className='back-link'>
              <Link to="/">← Back to Products</Link>
       </div>

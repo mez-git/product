@@ -1,78 +1,83 @@
-.search{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 4px;
-    margin: 4px;
-
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 4px;
+  margin: 4px;
 }
 
-.search-container{
-     display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    width: 75%;
-background-color:rgb(26 28 33);
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.search-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  width: 75%;
+  background-color: rgb(26 28 33);
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 .search input {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: whitesmoke;
- border: none;
- outline: none;
- flex: 1;
- background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+  border: none;
+  outline: none;
+  flex: 1;
+  background-color: transparent;
 }
 .search-container .search-tool {
-    padding: 2px;
-    margin: 2px;
+  padding: 2px;
+  margin: 2px;
 }
 
-.title-container{
-   display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-
+.title-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
-.title{
-     display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    color: whitesmoke;
-      font-size: 2em;
-          padding: 12px;
-    font-family: initial;
+.title {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  color: whitesmoke;
+  font-size: 2em;
+  padding: 12px;
+  padding-bottom: 13px;
+  font-family: initial;
 }
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: rgb(26, 28, 33);
   color: #333;
 }
 
 a {
   text-decoration: none;
-  color:whitesmoke;
+  color: whitesmoke;
 }
 
 .container-product-list {
   padding: 1rem;
   height: 100%;
-  background-color:rgb(26 28 33);
+  min-height: 100vh;
+  background-color: rgb(26 28 33);
 }
 
 .grid {
   display: grid;
   gap: 1rem;
+}
+.grid.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 1024px) {
@@ -94,10 +99,10 @@ a {
 }
 
 .card {
-  background-color: #9d9d9d;
+  background-color: rgb(26, 28, 33);
   padding: 1rem;
   border-radius: 8px;
-  border: 2px solid  #75bec5;
+  border: 2px solid #75bec5;
   transition: transform 0.2s;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
