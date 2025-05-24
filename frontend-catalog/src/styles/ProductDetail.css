@@ -1,6 +1,4 @@
 .detail-container {
-  min-height: 100vh;
-  background-color: rgb(56, 59, 67);
   display: flex;
   justify-content: center;
   align-items: center;
