@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Loader from '../components/Loader';
 import { type Product } from '../types';
-
+import "../styles/ProductDetail.css"
 export default function ProductDetail() {
   const { id } = useParams();
   const [product, setProduct] = useState<Product | null>(null);
@@ -27,7 +27,10 @@ export default function ProductDetail() {
 
   return (
     <div className="container">
-      <Link to="/">← Back to Products</Link>
+      <div className='back-link'>
+             <Link to="/">← Back to Products</Link>
+      </div>
+ 
       {product && (
         <div className="card" style={{ marginTop: '1rem' }}>
           <img src={product.image} alt={product.title} />

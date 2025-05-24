@@ -35,7 +35,7 @@ export default function ProductList() {
   if (error) return <div className="container">{error}</div>;
 
   return (
-    <div className="container">
+    <div className="container-product-list">
       <div className="search">
     <div className="search-container">
         <div className="search-tool">     <svg
@@ -59,9 +59,13 @@ export default function ProductList() {
         />
 
     </div>
-    
+  
       </div>
-
+  <div className="title-container">
+        <div className="title">
+            BROWSE
+        </div>
+    </div>
       <div className="grid">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
