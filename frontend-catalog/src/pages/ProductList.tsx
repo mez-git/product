@@ -10,6 +10,9 @@ export default function ProductList() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [search, setSearch] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
+  const categories = ["All", "Electronics", "Jewelery", "Men's Clothing", "Women's Clothing"];
+
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
@@ -25,12 +28,15 @@ export default function ProductList() {
       });
   }, []);
 
-  useEffect(() => {
-    const filtered = products.filter((product) =>
-      product.title.toLowerCase().includes(search.toLowerCase())
-    );
-    setFilteredProducts(filtered);
-  }, [search, products]);
+useEffect(() => {
+  const filtered = products.filter((product) => {
+    const matchesSearch = product.title.toLowerCase().includes(search.toLowerCase());
+    const matchesCategory = selectedCategory ? product.category === selectedCategory : true;
+    return matchesSearch && matchesCategory;
+  });
+  setFilteredProducts(filtered);
+}, [search, selectedCategory, products]);
+
 
   if (loading) return <Loader />;
   if (error) return <div className="container">{error}</div>;
@@ -60,7 +66,24 @@ export default function ProductList() {
         />
 
     </div>
-  
+  <div className="select-conatiner">
+
+    <select
+  value={selectedCategory}
+  onChange={(e) => setSelectedCategory(e.target.value)}
+  className="category-dropdown"
+>
+  {categories.map((category) => (
+    <option
+      key={category}
+      value={category === "All" ? "" : category.toLowerCase()}
+    >
+      {category}
+    </option>
+  ))}
+</select>
+
+  </div>
       </div>
   <div className="title-container">
         <div className="title">
